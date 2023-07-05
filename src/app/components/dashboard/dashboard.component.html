@@ -5,14 +5,41 @@
             class="w-[90%] sm:w-9/12 lg:w-3/5 p-2 text-xl text-center rounded-md"
             placeholder="Ingrese una ciudad"
         > -->
-        <input type="text" id="input-clima" class="block py-2.5 px-0 w-full text-xl text-center bg-transparent border-0 border-b-2 appearance-none text-white border-indigo-800 focus:border-indigo-700 focus:outline-none focus:ring-0 peer" placeholder=" "/>
+        <input 
+            type="text"
+            id="input-clima"
+            class="block py-2.5 px-0 w-full text-xl text-center bg-transparent border-0 border-b-2 appearance-none text-white border-indigo-800 focus:border-indigo-700 focus:outline-none focus:ring-0 peer"
+            placeholder=" "
+            [(ngModel)]="ciudad"/>
         
         <label for="input-clima" class="absolute text-xl text-white duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-300 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-">Ingrese una ciudad</label>
 
         <button 
-            class="w-ful sm:w-auto text-xl py-2 px-4 rounded-md bg-indigo-800 text-white">
+            class="w-ful sm:w-auto text-xl py-2 px-4 rounded-md bg-indigo-800 text-white"
+            [disabled]="ciudad === ''"
+            (click)="obtenerClima()"
+        >
             Buscar
         </button>
+    </div>
+
+    <div class="w-[90%] sm:w-9/12 lg:w-3/5 my-12 bg-gray-900/50 rounded-md flex flex-col sm:flex-row justify-center items-center gap-y-3 sm:gap-y-0 sm:gap-x-10 py-4">
+        <div class="flex flex-col gap-y-4 items-center">
+            <img src="../../../assets/img/sol.svg" class="w-40 md:w-64">
+            <p class="text-2xl text-white">Soleado</p>
+        </div>
+        <div>
+            <div class="flex items-center gap-x-4">
+                <img src="../../../assets/img/sol.svg" class="w-8">
+                <p class="text-xl text-white">Temperatura: <span>35°</span> </p>
+            </div>
+            
+            <div class="flex items-center gap-x-4">
+                <img src="../../../assets/img/sol.svg" class="w-8">
+                <p class="text-xl text-white">Húmedad: <span>68%</span> </p>
+            </div>
+        </div>
+
     </div>
 
 </div>
