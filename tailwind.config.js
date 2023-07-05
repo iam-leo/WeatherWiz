@@ -4,6 +4,9 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
+    fontFamily: {
+      'caveat': ['Caveat', 'cursive'],
+    },
     extend: {},
   },
   plugins: [],
