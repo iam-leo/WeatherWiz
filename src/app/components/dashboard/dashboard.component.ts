@@ -35,6 +35,11 @@ export class DashboardComponent implements OnInit, OnDestroy {
   ngOnInit(): void { }
 
   obtenerClima(){
+    //validar si hay una card anterior
+    if(this.existeCiudad){
+      this.existeCiudad = false;
+    }
+
     //Mostrar loading
     this.loading = true;
 

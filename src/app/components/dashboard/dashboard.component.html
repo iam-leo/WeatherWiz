@@ -1,21 +1,18 @@
 <div class="max-w-[1280px] w-full mx-auto flex flex-col justify-center items-center mt-14">
     <div class="w-[90%] sm:w-9/12 lg:w-3/5 flex flex-col sm:flex-row sm:items-center gap-y-5 sm:gap-y-0 sm:gap-x-3 relative z-0">
-        <!-- <input 
-            type="text"
-            class="w-[90%] sm:w-9/12 lg:w-3/5 p-2 text-xl text-center rounded-md"
-            placeholder="Ingrese una ciudad"
-        > -->
+       
         <input 
             type="text"
             id="input-clima"
             class="block py-2.5 px-0 w-full text-xl text-center bg-transparent border-0 border-b-2 appearance-none text-white border-indigo-800 focus:border-indigo-700 focus:outline-none focus:ring-0 peer"
             placeholder=" "
-            [(ngModel)]="ciudad"/>
+            [(ngModel)]="ciudad"
+        />
         
         <label for="input-clima" class="absolute text-xl text-white duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-300 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-">Ingrese una ciudad</label>
 
         <button 
-            class="w-ful sm:w-auto text-xl py-2 px-4 rounded-md bg-indigo-800 text-white"
+            class="px-4 py-2 text-xl text-white bg-indigo-800 rounded-md w-ful sm:w-auto"
             [disabled]="ciudad === ''"
             (click)="obtenerClima()"
         >
@@ -45,7 +42,7 @@
         class="w-[90%] sm:w-9/12 lg:w-3/5 my-12 bg-gray-900/50 rounded-md flex flex-col sm:flex-row justify-center items-center gap-y-3 sm:gap-y-0 sm:gap-x-10 py-8"
         *ngIf="existeCiudad"
     >
-        <div class="flex flex-col mb-3 sm:mb-0 items-center">
+        <div class="flex flex-col items-center mb-3 sm:mb-0">
             <img [src]="iconMain" class="w-40 md:w-64">
             <p class="text-2xl text-white">{{ descripcion | uppercase }}</p>
         </div>
@@ -92,7 +89,7 @@
         class="w-[90%] sm:w-9/12 lg:w-3/5 my-12 bg-red-600 rounded-md flex flex-col sm:flex-row justify-center items-center gap-y-3 sm:gap-y-0 sm:gap-x-10 py-4"
         *ngIf="errorBusqueda"
     >
-        <p class="text-center text-2xl text-white">Ciudad no encontrada</p>
+        <p class="text-2xl text-center text-white">Ciudad no encontrada</p>
     </div>
 
 </div>
