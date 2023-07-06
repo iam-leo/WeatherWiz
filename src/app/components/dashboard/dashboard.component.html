@@ -23,23 +23,76 @@
         </button>
     </div>
 
-    <div class="w-[90%] sm:w-9/12 lg:w-3/5 my-12 bg-gray-900/50 rounded-md flex flex-col sm:flex-row justify-center items-center gap-y-3 sm:gap-y-0 sm:gap-x-10 py-4">
-        <div class="flex flex-col gap-y-4 items-center">
-            <img src="../../../assets/img/sol.svg" class="w-40 md:w-64">
-            <p class="text-2xl text-white">Soleado</p>
+    <div 
+        class="w-[90%] sm:w-9/12 lg:w-3/5"
+        *ngIf="loading"
+    >
+        <div class="container-spinner">
+            <div class="cloud front">
+            <span class="left-front"></span>
+            <span class="right-front"></span>
+            </div>
+            <span class="sun sunshine"></span>
+            <span class="sun"></span>
+            <div class="cloud back">
+            <span class="left-back"></span>
+            <span class="right-back"></span>
+            </div>
         </div>
-        <div>
+    </div>
+
+    <div 
+        class="w-[90%] sm:w-9/12 lg:w-3/5 my-12 bg-gray-900/50 rounded-md flex flex-col sm:flex-row justify-center items-center gap-y-3 sm:gap-y-0 sm:gap-x-10 py-8"
+        *ngIf="existeCiudad"
+    >
+        <div class="flex flex-col mb-3 sm:mb-0 items-center">
+            <img [src]="iconMain" class="w-40 md:w-64">
+            <p class="text-2xl text-white">{{ descripcion | uppercase }}</p>
+        </div>
+        
+        <div class="flex flex-col justify-center gap-y-4">
             <div class="flex items-center gap-x-4">
-                <img src="../../../assets/img/sol.svg" class="w-8">
-                <p class="text-xl text-white">Temperatura: <span>35°</span> </p>
+                <img src="../../../assets/img/c.svg" class="w-8">
+                <p class="text-xl text-white">Temperatura actual: <span>{{temperatura | number: '1.1-1' }}°</span> </p>
+            </div>
+
+            <div class="flex items-center gap-x-4">
+                <div class="flex items-center gap-x-4">
+                    <img src="../../../assets/img/t-min.svg" class="w-8">
+                    <p class="text-xl text-white">Min: <span>{{temperaturaMin | number: '1.1-1' }}°</span> </p>
+                </div>
+
+                <div class="flex items-center gap-x-4">
+                    <img src="../../../assets/img/t-max.svg" class="w-8">
+                    <p class="text-xl text-white">Max: <span>{{temperaturaMax | number: '1.1-1' }}°</span> </p>
+                </div>
             </div>
             
             <div class="flex items-center gap-x-4">
-                <img src="../../../assets/img/sol.svg" class="w-8">
-                <p class="text-xl text-white">Húmedad: <span>68%</span> </p>
+                <img src="../../../assets/img/humidity.svg" class="w-8">
+                <p class="text-xl text-white">Húmedad: <span>{{humedad}}%</span> </p>
+            </div>
+
+            <div class="flex items-center gap-x-4">
+                <div class="flex items-center gap-x-4">
+                    <img src="../../../assets/img/sunrise.svg" class="w-8">
+                    <p class="text-xl text-white"><span>{{sunrise.hora | zeroPad }} : {{sunrise.minutos | zeroPad }} Hs</span> </p>
+                </div>
+
+                <div class="flex items-center gap-x-4">
+                    <img src="../../../assets/img/sunset.svg" class="w-8">
+                    <p class="text-xl text-white"><span>{{sunset.hora | zeroPad }} : {{sunset.minutos | zeroPad }} Hs</span> </p>
+                </div>
             </div>
         </div>
 
+    </div>
+
+    <div 
+        class="w-[90%] sm:w-9/12 lg:w-3/5 my-12 bg-red-600 rounded-md flex flex-col sm:flex-row justify-center items-center gap-y-3 sm:gap-y-0 sm:gap-x-10 py-4"
+        *ngIf="errorBusqueda"
+    >
+        <p class="text-center text-2xl text-white">Ciudad no encontrada</p>
     </div>
 
 </div>
