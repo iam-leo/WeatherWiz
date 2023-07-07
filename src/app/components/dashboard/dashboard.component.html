@@ -6,7 +6,9 @@
             id="input-clima"
             class="block py-2.5 px-0 w-full text-xl text-center bg-transparent border-0 border-b-2 appearance-none text-white border-indigo-800 focus:border-indigo-700 focus:outline-none focus:ring-0 peer"
             placeholder=" "
+            autocomplete="off"
             [(ngModel)]="ciudad"
+            (change)="validarInput()"
         />
         
         <label for="input-clima" class="absolute text-xl text-white duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-300 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-">Ingrese una ciudad</label>
@@ -39,7 +41,7 @@
     </div>
 
     <div 
-        class="w-[90%] sm:w-9/12 lg:w-3/5 my-12 bg-gray-900/50 rounded-md flex flex-col sm:flex-row justify-center items-center gap-y-3 sm:gap-y-0 sm:gap-x-10 py-8"
+        class="w-[90%] lg:w-3/5 my-12 bg-gray-900/50 rounded-md flex flex-col md:flex-row justify-center items-center gap-y-3 md:gap-y-0 md:gap-x-10 p-8"
         *ngIf="existeCiudad"
     >
         <div class="flex flex-col items-center mb-3 sm:mb-0">

@@ -34,6 +34,13 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void { }
 
+  validarInput(){
+    if(this.ciudad === ''){
+      //Ocultar card en caso de que el user borre el input pero no le de a buscar
+      this.existeCiudad = false;
+    }
+  }
+
   obtenerClima(){
     //validar si hay una card anterior
     if(this.existeCiudad){
