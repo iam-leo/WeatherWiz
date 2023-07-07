@@ -1,27 +1,22 @@
-# AppClima
+# 🌤 WeatherWiz
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+## ☀ Descripción:
+¡Bienvenido a WeatherWiz! Esta aplicación web te proporciona información meteorológica actualizada de todo el mundo en una interfaz elegante y fácil de usar. Con WeatherWizApp, puedes consultar rápidamente las condiciones climáticas de tu ciudad o la que desees y mantenerte informado.
 
-## Development server
+<div align="center">
+    <img src="https://github.com/iam-leo/WeatherWiz/assets/79548542/74c2d45a-9e34-4596-b690-e0162990ccab">
+</div>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## ☀ Cómo utilizar
+1. Simplemente visita **[WeatherWiz](https://weatherwizapp.netlify.app/)**.
 
-## Code scaffolding
+2. Ingresa el nombre de una ciudad en la barra de búsqueda.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3. Dale click/tap al botón ` Buscar `
 
-## Build
+4. Listo ¡Ya tienes los resultados!
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## ☀ Tecnologías utilizadas
 
-## Running unit tests
+[![project teach](https://skillicons.dev/icons?i=angular,tailwind,typescript)](https://skillicons.dev)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
