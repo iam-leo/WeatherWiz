@@ -6,14 +6,16 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ZeroPadPipe } from './zero-pad.pipe'
+import { ZeroPadPipe } from './zero-pad.pipe';
+import { FooterComponent } from './components/footer/footer.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     DashboardComponent,
-    ZeroPadPipe
+    ZeroPadPipe,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
